@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forest Resort Slots</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="slot-machine">
+    <div class="lever-container">
+      <div id="lever"></div>
+    </div>
+    <div class="reel-frame">
+      <div class="reels">
+        <div class="reel" id="reel1">?</div>
+        <div class="reel" id="reel2">?</div>
+        <div class="reel" id="reel3">?</div>
+      </div>
+    </div>
+    <div class="info-panel">
+      <div id="wallet">Wallet: $0</div>
+      <div id="bet">Current Bet: $0</div>
+    </div>
+  </div>
+
+  <!-- Overlays -->
+  <div id="start-screen" class="overlay">
+    <div class="modal">
+      <h2>Start Game</h2>
+      <label>Initial Wallet: <input type="number" id="initial-wallet" value="100"/></label>
+      <label>Bet Size: <input type="number" id="bet-size" value="10"/></label>
+      <button id="start-button">Start Game</button>
+    </div>
+  </div>
+
+  <div id="game-over-screen" class="overlay hidden">
+    <div class="modal">
+      <h2>Game Over</h2>
+      <button id="restart-button">Restart</button>
+    </div>
+  </div>
+
+  <!-- Optional Big Win -->
+  <div id="big-win-banner" class="hidden">BIG WIN!</div>
+
+  <!-- Music & Sound Controls -->
+  <audio id="bg-music" loop>
+    <source src="forest-theme.mp3" type="audio/mpeg" />
+  </audio>
+  <button id="toggle-music">🔊</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
